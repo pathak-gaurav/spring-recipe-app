@@ -13,11 +13,20 @@ public class Ingredient {
     private Long ingredientId;
     private String description;
     private BigDecimal amount;
-    //private UnitOfMeasure uom;
 
     @ManyToOne
     private Recipe recipe;
 
+    @OneToOne(fetch = FetchType.EAGER)
+    private UnitOfMeasure unitOfMeasure;
+
+    public UnitOfMeasure getUnitOfMeasure() {
+        return unitOfMeasure;
+    }
+
+    public void setUnitOfMeasure(UnitOfMeasure unitOfMeasure) {
+        this.unitOfMeasure = unitOfMeasure;
+    }
 
     public Long getIngredientId() {
         return ingredientId;
