@@ -6,8 +6,7 @@ import javax.persistence.*;
 public class UnitOfMeasure {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "uom_id_generator")
-    @SequenceGenerator(name = "uom_id_generator", initialValue = 41001, allocationSize = 1, schema = "uom_id_sequence")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "UOM_ID")
     private Long uomId;
 

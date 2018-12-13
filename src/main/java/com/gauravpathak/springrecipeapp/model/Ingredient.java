@@ -7,8 +7,7 @@ import java.math.BigDecimal;
 public class Ingredient {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ingredient_id_generator")
-    @SequenceGenerator(name = "ingredient_id_generator", allocationSize = 1, initialValue = 31001, sequenceName = "ingredient_id_sequence")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "INGREDIENT_ID")
     private Long ingredientId;
     private String description;

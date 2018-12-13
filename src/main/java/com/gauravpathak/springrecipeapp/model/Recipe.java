@@ -7,8 +7,7 @@ import java.util.Set;
 public class Recipe {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "recipe_id_generator")
-    @SequenceGenerator(name = "recipe_id_generator", allocationSize = 1, initialValue = 101, sequenceName = "recipe_id_sequence")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "RECIPE_ID")
     private Long recipeId;
 
@@ -29,6 +28,10 @@ public class Recipe {
 
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Notes notes;
+
+    @ManyToMany
+    @JoinTable(name = "RECIPE_CATEGORY", joinColumns = @JoinColumn(name = "RECIPE_ID"), inverseJoinColumns = @JoinColumn(name = "CATEGORY_ID"))
+    private Set<Category> categories;
 
     public Long getRecipeId() {
         return recipeId;
@@ -124,5 +127,13 @@ public class Recipe {
 
     public void setDifficulty(Difficulty difficulty) {
         this.difficulty = difficulty;
+    }
+
+    public Set<Category> getCategories() {
+        return categories;
+    }
+
+    public void setCategories(Set<Category> categories) {
+        this.categories = categories;
     }
 }

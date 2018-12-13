@@ -6,8 +6,7 @@ import javax.persistence.*;
 public class Notes {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "note_id_generator")
-    @SequenceGenerator(name = "note_id_generator", allocationSize = 1, initialValue = 21001, sequenceName = "note_id_sequence")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "NOTES_ID")
     private Long notesId;
 
