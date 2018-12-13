@@ -11,7 +11,7 @@ public class Notes {
     @Column(name = "NOTES_ID")
     private Long notesId;
 
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToOne
     private Recipe recipe;
 
     @Lob
