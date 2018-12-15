@@ -10,8 +10,8 @@ public class UnitOfMeasure {
     @Column(name = "UOM_ID")
     private Long uomId;
 
-    @Column(name = "uom")
-    private String uom;
+    @Column(name = "description")
+    private String description;
 
     public Long getUomId() {
         return uomId;
@@ -21,12 +21,12 @@ public class UnitOfMeasure {
         this.uomId = uomId;
     }
 
-    public String getUom() {
-        return uom;
+    public String getDescription() {
+        return description;
     }
 
-    public void setUom(String uom) {
-        this.uom = uom;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
 }
