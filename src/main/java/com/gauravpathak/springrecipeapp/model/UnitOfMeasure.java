@@ -13,6 +13,13 @@ public class UnitOfMeasure {
     @Column(name = "description")
     private String description;
 
+    public UnitOfMeasure(String description) {
+        this.description = description;
+    }
+
+    public UnitOfMeasure() {
+    }
+
     public Long getUomId() {
         return uomId;
     }

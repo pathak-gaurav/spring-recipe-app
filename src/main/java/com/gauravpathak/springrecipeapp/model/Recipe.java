@@ -1,6 +1,7 @@
 package com.gauravpathak.springrecipeapp.model;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -11,12 +12,14 @@ public class Recipe {
     @Column(name = "RECIPE_ID")
     private Long recipeId;
 
+    @Lob
     private String description;
     private Integer prepTime;
     private Integer cookTime;
     private Integer servings;
     private String source;
     private String url;
+    @Lob
     private String directions;
     @Lob
     private Byte[] images;
@@ -24,14 +27,14 @@ public class Recipe {
     @Enumerated(EnumType.STRING)
     private Difficulty difficulty;
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "recipe")
-    private Set<Ingredient> ingredients;
+    private Set<Ingredient> ingredients = new HashSet<>();
 
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Notes notes;
 
     @ManyToMany
     @JoinTable(name = "RECIPE_CATEGORY", joinColumns = @JoinColumn(name = "RECIPE_ID"), inverseJoinColumns = @JoinColumn(name = "CATEGORY_ID"))
-    private Set<Category> categories;
+    private Set<Category> categories = new HashSet<>();
 
     public Long getRecipeId() {
         return recipeId;
@@ -47,6 +50,9 @@ public class Recipe {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public Recipe() {
     }
 
     public Integer getPrepTime() {

@@ -1,6 +1,7 @@
 package com.gauravpathak.springrecipeapp.model;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -12,8 +13,16 @@ public class Category {
     private Long categoryId;
     private String description;
 
+    public Category(String description, Set<Recipe> recipe) {
+        this.description = description;
+        this.recipe = recipe;
+    }
+
+    public Category() {
+    }
+
     @ManyToMany(mappedBy = "categories")
-    private Set<Recipe> recipe;
+    private Set<Recipe> recipe = new HashSet<>();
 
     public Long getCategoryId() {
         return categoryId;
