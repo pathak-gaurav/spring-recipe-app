@@ -105,16 +105,16 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
         victoriaSpongeNotes.setRecipeNotes("The classic Victoria sandwich is always a teatime winner, every bite brings a taste of nostalgia");
 
         victoriaSpongeRecipe.setNotes(victoriaSpongeNotes);
-        victoriaSpongeRecipe.getIngredients().add(new Ingredient("unsalted butter, softened, plus extra for greasing (gram)", new BigDecimal(200), unitOfMeasureCup,victoriaSpongeRecipe));
-        victoriaSpongeRecipe.getIngredients().add(new Ingredient("caster sugar (gram)", new BigDecimal(200), unitOfMeasureCup,victoriaSpongeRecipe));
-        victoriaSpongeRecipe.getIngredients().add(new Ingredient("vanilla extract", new BigDecimal(1), unitOfMeasureTablespoon,victoriaSpongeRecipe));
-        victoriaSpongeRecipe.getIngredients().add(new Ingredient("medium eggs", new BigDecimal(4), unitOfMeasureEach,victoriaSpongeRecipe));
-        victoriaSpongeRecipe.getIngredients().add(new Ingredient("self-raising flour, plus extra for dusting (gram)", new BigDecimal(200), unitOfMeasureCup,victoriaSpongeRecipe));
-        victoriaSpongeRecipe.getIngredients().add(new Ingredient("raspberry jam", new BigDecimal(6), unitOfMeasureTablespoon,victoriaSpongeRecipe));
-        victoriaSpongeRecipe.getIngredients().add(new Ingredient("double cream, whipped (milli Liter)", new BigDecimal(250), unitOfMeasureCup,victoriaSpongeRecipe));
-        victoriaSpongeRecipe.getIngredients().add(new Ingredient("icing sugar, for dusting", new BigDecimal(1), unitOfMeasureCup,victoriaSpongeRecipe));
+        victoriaSpongeRecipe.addIngredient(new Ingredient("unsalted butter, softened, plus extra for greasing (gram)", new BigDecimal(200), unitOfMeasureCup));
+        victoriaSpongeRecipe.addIngredient(new Ingredient("caster sugar (gram)", new BigDecimal(200), unitOfMeasureCup));
+        victoriaSpongeRecipe.addIngredient(new Ingredient("vanilla extract", new BigDecimal(1), unitOfMeasureTablespoon));
+        victoriaSpongeRecipe.addIngredient(new Ingredient("medium eggs", new BigDecimal(4), unitOfMeasureEach));
+        victoriaSpongeRecipe.addIngredient(new Ingredient("self-raising flour, plus extra for dusting (gram)", new BigDecimal(200), unitOfMeasureCup));
+        victoriaSpongeRecipe.addIngredient(new Ingredient("raspberry jam", new BigDecimal(6), unitOfMeasureTablespoon));
+        victoriaSpongeRecipe.addIngredient(new Ingredient("double cream, whipped (milli Liter)", new BigDecimal(250), unitOfMeasureCup));
+        victoriaSpongeRecipe.addIngredient(new Ingredient("icing sugar, for dusting", new BigDecimal(1), unitOfMeasureCup));
 
-        victoriaSpongeNotes.setRecipe(victoriaSpongeRecipe);
+        //victoriaSpongeNotes.setRecipe(victoriaSpongeRecipe);
         victoriaSpongeRecipe.getCategories().add(categoryBritish);
 
 
@@ -145,18 +145,18 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
         lancashireHotpotNotes.setRecipeNotes("This famous lamb stew topped with sliced potatoes should be on the menu at every British pub");
 
         lancashireHotpotRecipe.setNotes(lancashireHotpotNotes);
-        lancashireHotpotRecipe.getIngredients().add(new Ingredient("butter (gram)", new BigDecimal(100), unitOfMeasureCup,lancashireHotpotRecipe));
-        lancashireHotpotRecipe.getIngredients().add(new Ingredient("stewing lamb, cut into large chunks (gram)", new BigDecimal(900), unitOfMeasureCup,lancashireHotpotRecipe));
-        lancashireHotpotRecipe.getIngredients().add(new Ingredient("lamb kidneys, sliced, fat removed", new BigDecimal(3), unitOfMeasureEach,lancashireHotpotRecipe));
-        lancashireHotpotRecipe.getIngredients().add(new Ingredient("medium onions chopped", new BigDecimal(2), unitOfMeasureEach,lancashireHotpotRecipe));
-        lancashireHotpotRecipe.getIngredients().add(new Ingredient("carrot peeled and sliced", new BigDecimal(4), unitOfMeasureEach,lancashireHotpotRecipe));
-        lancashireHotpotRecipe.getIngredients().add(new Ingredient("plain flour (gram)", new BigDecimal(25), unitOfMeasureCup,lancashireHotpotRecipe));
-        lancashireHotpotRecipe.getIngredients().add(new Ingredient("Worcestershire sauce", new BigDecimal(2), unitOfMeasureTablespoon,lancashireHotpotRecipe));
-        lancashireHotpotRecipe.getIngredients().add(new Ingredient("lamb or chicken stock (milliliter)", new BigDecimal(500), unitOfMeasureCup,lancashireHotpotRecipe));
-        lancashireHotpotRecipe.getIngredients().add(new Ingredient("bay leaves", new BigDecimal(2), unitOfMeasureEach,lancashireHotpotRecipe));
-        lancashireHotpotRecipe.getIngredients().add(new Ingredient("potato peeled and sliced (gram)", new BigDecimal(900), unitOfMeasureCup,lancashireHotpotRecipe));
+        lancashireHotpotRecipe.addIngredient(new Ingredient("butter (gram)", new BigDecimal(100), unitOfMeasureCup));
+        lancashireHotpotRecipe.addIngredient(new Ingredient("stewing lamb, cut into large chunks (gram)", new BigDecimal(900), unitOfMeasureCup));
+        lancashireHotpotRecipe.addIngredient(new Ingredient("lamb kidneys, sliced, fat removed", new BigDecimal(3), unitOfMeasureEach));
+        lancashireHotpotRecipe.addIngredient(new Ingredient("medium onions chopped", new BigDecimal(2), unitOfMeasureEach));
+        lancashireHotpotRecipe.addIngredient(new Ingredient("carrot peeled and sliced", new BigDecimal(4), unitOfMeasureEach));
+        lancashireHotpotRecipe.addIngredient(new Ingredient("plain flour (gram)", new BigDecimal(25), unitOfMeasureCup));
+        lancashireHotpotRecipe.addIngredient(new Ingredient("Worcestershire sauce", new BigDecimal(2), unitOfMeasureTablespoon));
+        lancashireHotpotRecipe.addIngredient(new Ingredient("lamb or chicken stock (milliliter)", new BigDecimal(500), unitOfMeasureCup));
+        lancashireHotpotRecipe.addIngredient(new Ingredient("bay leaves", new BigDecimal(2), unitOfMeasureEach));
+        lancashireHotpotRecipe.addIngredient(new Ingredient("potato peeled and sliced (gram)", new BigDecimal(900), unitOfMeasureCup));
 
-        lancashireHotpotNotes.setRecipe(lancashireHotpotRecipe);
+        //lancashireHotpotNotes.setRecipe(lancashireHotpotRecipe);
         lancashireHotpotRecipe.getCategories().add(categoryBritish);
         recipes.add(lancashireHotpotRecipe);
 
