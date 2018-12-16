@@ -1,7 +1,10 @@
 package com.gauravpathak.springrecipeapp.model;
 
+import lombok.Data;
+
 import javax.persistence.*;
 
+@Data
 @Entity
 public class UnitOfMeasure {
 
@@ -18,22 +21,6 @@ public class UnitOfMeasure {
     }
 
     public UnitOfMeasure() {
-    }
-
-    public Long getUomId() {
-        return uomId;
-    }
-
-    public void setUomId(Long uomId) {
-        this.uomId = uomId;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 
 }

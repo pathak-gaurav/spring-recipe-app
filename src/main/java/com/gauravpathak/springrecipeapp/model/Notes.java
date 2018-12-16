@@ -1,8 +1,13 @@
 package com.gauravpathak.springrecipeapp.model;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
 import javax.persistence.*;
 
+@Data
 @Entity
+@EqualsAndHashCode(exclude = "recipe")
 public class Notes {
 
     @Id
@@ -24,27 +29,4 @@ public class Notes {
     public Notes() {
     }
 
-    public Long getNotesId() {
-        return notesId;
-    }
-
-    public void setNotesId(Long notesId) {
-        this.notesId = notesId;
-    }
-
-    public Recipe getRecipe() {
-        return recipe;
-    }
-
-    public void setRecipe(Recipe recipe) {
-        this.recipe = recipe;
-    }
-
-    public String getRecipeNotes() {
-        return recipeNotes;
-    }
-
-    public void setRecipeNotes(String recipeNotes) {
-        this.recipeNotes = recipeNotes;
-    }
 }
