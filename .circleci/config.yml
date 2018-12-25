@@ -5,7 +5,7 @@ jobs: # a collection of steps
     working_directory: ~/spring-recipe-app # directory where steps will run
 
     docker: # run the steps with Docker
-      - image: circleci/openjdk:8-jdk-browsers # ...with this image as the primary container; this is where all `steps` will run
+      - image: circleci/openjdk:8-jdk # ...with this image as the primary container; this is where all `steps` will run
 
     steps: # a collection of executable commands
 
@@ -14,6 +14,8 @@ jobs: # a collection of steps
       - restore_cache: # restore the saved cache after the first run or if `pom.xml` has changed
           # Read about caching dependencies: https://circleci.com/docs/2.0/caching/
           key: spring-recipe-app-{{ checksum "pom.xml" }}
+
+      - run: mvn install -DskipTests
 
       - run: mvn dependency:go-offline # gets the project dependencies
 
