@@ -89,6 +89,9 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
         Category categoryBritish = british.get();
 
         Recipe victoriaSpongeRecipe = new Recipe();
+        victoriaSpongeRecipe.setUrl("https://www.bbcgoodfood.com/recipes/532634/grannys-victoria-sponge");
+        victoriaSpongeRecipe.setSource("BBC Good Food");
+        victoriaSpongeRecipe.setServings(Integer.valueOf(10));
         victoriaSpongeRecipe.setDescription("\n" +
                 "Granny's Victoria sponge");
         victoriaSpongeRecipe.setPrepTime(20);
@@ -126,6 +129,9 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
         recipes.add(victoriaSpongeRecipe);
 
         Recipe lancashireHotpotRecipe = new Recipe();
+        lancashireHotpotRecipe.setServings(Integer.valueOf(4));
+        lancashireHotpotRecipe.setUrl("https://www.bbcgoodfood.com/recipes/9099/lancashire-hotpot");
+        lancashireHotpotRecipe.setSource("BBC Good Food");
         lancashireHotpotRecipe.setDescription("Lancashire Hotpot");
         lancashireHotpotRecipe.setCookTime(100);
         lancashireHotpotRecipe.setPrepTime(20);
